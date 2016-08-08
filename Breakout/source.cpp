@@ -62,7 +62,7 @@ public:
 		//	checking vertical Boundary Constraints
 		if (getTop() < 0)
 		{
-			velocity.y = ballRadius * 0.8;
+			velocity.y = ballVelocity;
 		}
 		else if (getBottom() > windowHeight)
 		{

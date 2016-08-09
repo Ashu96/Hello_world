@@ -1,4 +1,8 @@
-
+/*
+*	souce.cpp
+*	Breakout 2D game
+*	Ashutosh
+*/
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 #include <SFML/Audio.hpp>

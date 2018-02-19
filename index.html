@@ -1,98 +1,59 @@
-
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <style>
-        body {
-        background-color: #3498db;
-        transition: background-color 0.5s ease-in-out;
-        }
-
-        .box {
-        width: 300px;
-        padding: 40px;
-        margin: 60px auto;
-        background-color: #fff;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-        }
-
-        .btn-right {
-        margin-left: 50px;
-        }
-
-    </style>
-    <script>
-        var CSS_COLOR_NAMES = ["AliceBlue","AntiqueWhite","Aqua","Aquamarine","Azure","Beige","Bisque","Black","BlanchedAlmond","Blue","BlueViolet","Brown","BurlyWood","CadetBlue","Chartreuse","Chocolate","Coral","CornflowerBlue","Cornsilk","Crimson","Cyan","DarkBlue","DarkCyan","DarkGoldenRod","DarkGray","DarkGrey","DarkGreen","DarkKhaki","DarkMagenta","DarkOliveGreen","Darkorange","DarkOrchid","DarkRed","DarkSalmon","DarkSeaGreen","DarkSlateBlue","DarkSlateGray","DarkSlateGrey","DarkTurquoise","DarkViolet","DeepPink","DeepSkyBlue","DimGray","DimGrey","DodgerBlue","FireBrick","FloralWhite","ForestGreen","Fuchsia","Gainsboro","GhostWhite","Gold","GoldenRod","Gray","Grey","Green","GreenYellow","HoneyDew","HotPink","IndianRed","Indigo","Ivory","Khaki","Lavender","LavenderBlush","LawnGreen","LemonChiffon","LightBlue","LightCoral","LightCyan","LightGoldenRodYellow","LightGray","LightGrey","LightGreen","LightPink","LightSalmon","LightSeaGreen","LightSkyBlue","LightSlateGray","LightSlateGrey","LightSteelBlue","LightYellow","Lime","LimeGreen","Linen","Magenta","Maroon","MediumAquaMarine","MediumBlue","MediumOrchid","MediumPurple","MediumSeaGreen","MediumSlateBlue","MediumSpringGreen","MediumTurquoise","MediumVioletRed","MidnightBlue","MintCream","MistyRose","Moccasin","NavajoWhite","Navy","OldLace","Olive","OliveDrab","Orange","OrangeRed","Orchid","PaleGoldenRod","PaleGreen","PaleTurquoise","PaleVioletRed","PapayaWhip","PeachPuff","Peru","Pink","Plum","PowderBlue","Purple","Red","RosyBrown","RoyalBlue","SaddleBrown","Salmon","SandyBrown","SeaGreen","SeaShell","Sienna","Silver","SkyBlue","SlateBlue","SlateGray","SlateGrey","Snow","SpringGreen","SteelBlue","Tan","Teal","Thistle","Tomato","Turquoise","Violet","Wheat","White","WhiteSmoke","Yellow","YellowGreen"];
-        var quotes = [
-            {
-                quote: "The question of whether a computer can think is no more interesting than the question of whether a submarine can swim.",
-                by: "Edsger W. Dijkstra"
-            },
-            {
-                quote: "Programming languages, like pizzas, come in only too sizes; too big and too small.",
-                by: "Richard E. Pattis"
-            },
-            {
-                quote: "“Any fool can write code that a computer can understand. Good programmers write code that humans can understand.”",
-                by: "Martin Fowler"
-            },
-            {
-                quote: "“If you think it's simple, then you have misunderstood the problem.”",
-                by: "Bjarne Stroustrup"
-            },
-            {
-                quote: "“ Code is like humor. When you have to explain it, it’s bad.”",
-                by: "Cory House"
-            }
-        ];
-
-        function randomColor() {
-            var colorIndex = Math.round((Math.random() * 100 )) % CSS_COLOR_NAMES.length;
-            var body = document.querySelector('body');
-            body.style.backgroundColor = CSS_COLOR_NAMES[colorIndex];
-            
-        }
-
-        function randomQuote() {
-            var index = Math.round(Math.random() * 100 ) % quotes.length;
-            var quote = quotes[index].quote;
-            var by = quotes[index].by;
-
-            var text = document.querySelector('#text');
-            var cite = document.querySelector('#cite');
-
-            setTimeout(() => {text.innerHTML = quote;
-            cite.innerHTML = by;}, 200);
-
-         }
-
-    </script>
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <div class='container'>
-        <div class="box">
-          <blockquote class="blockquote text-center">
-            <p class="mb-0" id="text">I'm Batman.</p>
-            <footer class="blockquote-footer" >By <cite title="Source Title" id="cite">Batman</cite></footer>
-          </blockquote>
-          <br>
-          <div class="btn btn-primary btn-right" id="quote-btn" onclick="randomColor(); randomQuote();">
-              New Quote
-          </div>
-        </div>
-    </div>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ashutosh</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/Ariil-Alphabet-Letter-A.ico">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <style type="text/css" media="screen">
+    html, body {
+      min-height: 100%;
+    }
+    body {
+      background: #23262b;
+      font-family: 'Raleway' ,sans-serif;
+      font-size: 16px;
+      letter-spacing: 3px;
+      line-height: 18px;
+      padding-top: 50px;
+    }
+    p {
+      color: #ddd;
+      cursor: default;
+      margin: 50px auto 0;
+      text-align: center;
+      text-shadow: 0px 1px 2px #000;
+    }
+    p.links, a {
+      color: #39c;
+      text-decoration: none;
+      transition: color 0.1s;
+    }
+    a:hover, a:focus {
+      color: #ddd;
+      outline: none;
+    }
+    ::selection {
+      background: #000;
+      color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <p>
+    Perfection is achieved not when there is nothing more to add,<br />
+    but when there is nothing left to take away.
+  </p>
+  <p class="links">
+    <a href="https://www.facebook.com/ashutosh.bhardwaj30">facebook</a>
+    &middot;
+    <a href="http://www.github.com/Ashu96">github</a>
+  </p>
+  </br>
+  </br>
+  <div align="center">
+  <iframe width="350" height="430" style="float:middle" src="https://console.api.ai/api-client/demo/embedded/5bdcf197-ce51-4f47-a5b8-8d122ed0eab6"></iframe>
+  </div>
+   </body>
 </html>
